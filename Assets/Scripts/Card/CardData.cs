@@ -5,15 +5,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewCard", menuName = "Cards/Card Data")]
 public class CardData : ScriptableObject
 {
-    [Header("Ä«µå Á¤º¸")]
-    public string cardId;               //Ä«µå ±¸º°¿ë Id
-    public string cardName;             //Ä«µå ÀÌ¸§
-    public string description;          //Ä«µå ¼³¸í
+    [Header("ì¹´ë“œ ì •ë³´")]
+    public string cardId;                           //ì¹´ë“œ êµ¬ë³„ìš© Id
+    public string cardName;                         //ì¹´ë“œ ì´ë¦„
+    [TextArea]public string description;            //ì¹´ë“œ ì„¤ëª…
 
-    //ÀÏ¹İ ½ºÅ³ È¿°ú (°ø°İ µî) ¸®½ºÆ® Ãß°¡ ¿¹Á¤
+    [Header("ë©”ì¸ íš¨ê³¼")]
+    [Tooltip("ê³µê²© ìŠ¤í‚¬")] public AttackEffect attackEffect;                                            //ì¹´ë“œ ë©”ì¸ íš¨ê³¼
 
-    [Header("ºÎ°¡ ½ºÅ³ È¿°ú")]
-    [Tooltip("¹öÇÁ È¿°ú")] public List<StatusEffect> buffEffects = new List<StatusEffect>();            //Ä«µå È¿°ú(¹öÇÁ)
-    [Tooltip("µğ¹öÇÁ È¿°ú")] public List<StatusEffect> debuffEffects = new List<StatusEffect>();        //Ä«µå È¿°ú(µğ¹öÇÁ)
-    [Tooltip("À¯Æ¿ È¿°ú")] public List<StatusEffect> utilityEffects = new List<StatusEffect>();         //Ä«µå È¿°ú(À¯Æ¿)
+    [Header("ë¶€ê°€ ìŠ¤í‚¬ íš¨ê³¼")]
+    [Tooltip("ë²„í”„ íš¨ê³¼")] public List<StatusEffect> buffEffects = new List<StatusEffect>();            //ë¶€ê°€ íš¨ê³¼(ë²„í”„)
+    [Tooltip("ë””ë²„í”„ íš¨ê³¼")] public List<StatusEffect> debuffEffects = new List<StatusEffect>();        //ë¶€ê°€ íš¨ê³¼(ë””ë²„í”„)
+    [Tooltip("ìœ í‹¸ íš¨ê³¼")] public List<StatusEffect> utilityEffects = new List<StatusEffect>();         //ë¶€ê°€ íš¨ê³¼(ìœ í‹¸)
 }
